@@ -1,0 +1,694 @@
+/* ============================================
+   CUSTOM PORTFOLIO STYLES - Hatvik Patel
+   Black & Gold Dark Theme
+   ============================================ */
+
+:root {
+    --gold: #FDB927;
+    --gold-dark: #c9960c;
+    --gold-light: #ffe066;
+    --gold-glow: rgba(253, 185, 39, 0.35);
+    --bg-black: #000000;
+    --bg-dark: #0a0a0a;
+    --bg-card: #111111;
+    --bg-elevated: #161616;
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --border-medium: rgba(255, 255, 255, 0.12);
+    --text-primary: #ffffff;
+    --text-secondary: #c0c0c0;
+    --text-muted: rgba(255, 255, 255, 0.45);
+}
+
+/* ========================================================
+   FULL DARK BACKGROUND OVERRIDES
+   Converts template from white to consistent black theme
+   ======================================================== */
+
+/* --- Base Body & Wrapper --- */
+body {
+    background-color: var(--bg-black) !important;
+    color: var(--text-secondary);
+}
+
+#wrapper > .bg {
+    background-color: var(--bg-black) !important;
+    background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/bg.jpg") !important;
+}
+
+#wrapper.fade-in:before {
+    background: var(--bg-black) !important;
+}
+
+/* --- Main Content Area (white -> black) --- */
+#main {
+    background-color: var(--bg-dark) !important;
+}
+
+/* Text colors for dark background */
+#main,
+#main p,
+#main li,
+#main span,
+#main blockquote {
+    color: var(--text-secondary);
+}
+
+#main h1, #main h2, #main h3,
+#main h4, #main h5, #main h6 {
+    color: var(--text-primary) !important;
+}
+
+#main h1 a, #main h2 a, #main h3 a,
+#main h4 a, #main h5 a, #main h6 a {
+    color: var(--text-primary) !important;
+}
+
+#main h2 a:hover {
+    color: var(--gold) !important;
+}
+
+#main a {
+    color: var(--gold);
+    border-bottom-color: rgba(253, 185, 39, 0.3);
+}
+
+#main a:hover {
+    color: var(--gold-light) !important;
+    border-bottom-color: transparent;
+}
+
+/* Date labels */
+#main .date,
+#main header .date {
+    color: var(--gold) !important;
+}
+
+/* Borders: light gray -> subtle dark */
+#main > * {
+    border-top-color: var(--border-subtle) !important;
+}
+
+#main > .posts > article {
+    border-color: var(--border-subtle) !important;
+}
+
+/* Buttons in main area */
+#main .button,
+#main input[type="submit"] {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+    color: var(--text-primary) !important;
+}
+
+/* Pagination */
+.pagination a,
+.pagination span {
+    border-color: var(--border-medium) !important;
+    color: var(--text-muted) !important;
+}
+
+.pagination a.active {
+    background-color: var(--gold) !important;
+    color: #000 !important;
+    border-color: var(--gold) !important;
+}
+
+.pagination a:hover {
+    border-color: var(--gold) !important;
+    color: var(--gold) !important;
+}
+
+/* --- Footer (dark theme) --- */
+#footer {
+    background-color: var(--bg-dark);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#footer h1, #footer h2, #footer h3,
+#footer h4, #footer h5, #footer h6 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+#footer label {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+#footer a {
+    color: rgba(255, 255, 255, 0.5) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+#footer a:hover {
+    color: var(--gold) !important;
+    border-bottom-color: transparent !important;
+}
+
+#footer input[type="text"],
+#footer input[type="password"],
+#footer input[type="email"],
+#footer select,
+#footer textarea {
+    border-color: var(--border-medium) !important;
+    color: var(--text-primary) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+#footer input[type="text"]:focus,
+#footer input[type="password"]:focus,
+#footer input[type="email"]:focus,
+#footer select:focus,
+#footer textarea:focus {
+    border-color: var(--gold) !important;
+    box-shadow: 0 0 0 1px var(--gold) !important;
+}
+
+#footer input[type="text"]::placeholder,
+#footer textarea::placeholder {
+    color: rgba(255, 255, 255, 0.2) !important;
+}
+
+#footer .button,
+#footer input[type="submit"],
+#footer input[type="reset"],
+#footer input[type="button"],
+#footer button {
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2) !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+#footer hr,
+#footer .split.contact > section {
+    border-color: var(--border-subtle) !important;
+}
+
+/* --- Copyright --- */
+#copyright {
+    color: rgba(255, 255, 255, 0.25) !important;
+}
+
+#copyright a {
+    color: var(--gold) !important;
+}
+
+/* --- Decorative lines around dates --- */
+header.major .date:before,
+header.major .date:after {
+    border-top-color: var(--border-medium) !important;
+}
+
+#footer header.major .date:before,
+#footer header.major .date:after {
+    border-top-color: var(--border-medium) !important;
+}
+
+/* --- Code blocks on dark --- */
+#main code {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: var(--border-medium) !important;
+    color: var(--gold) !important;
+}
+
+/* --- Tables on dark --- */
+#main table tbody tr:nth-child(2n + 1) {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+#main table th,
+#main table td {
+    border-color: var(--border-subtle) !important;
+    color: var(--text-secondary);
+}
+
+/* ========== LOADING SCREEN ========== */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#loader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-monogram {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    margin-bottom: 2rem;
+    animation: pulse-gold 1.5s ease-in-out infinite;
+}
+
+.loader-tagline {
+    font-family: 'Merriweather', serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.loader-bar {
+    width: 220px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.loader-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+    border-radius: 3px;
+    animation: load-bar 2.2s ease-in-out forwards;
+}
+
+@keyframes load-bar {
+    0% { width: 0%; }
+    40% { width: 55%; }
+    80% { width: 85%; }
+    100% { width: 100%; }
+}
+
+@keyframes pulse-gold {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(253, 185, 39, 0.2),
+                     0 0 20px rgba(253, 185, 39, 0.05);
+    }
+    50% {
+        text-shadow: 0 0 25px rgba(253, 185, 39, 0.5),
+                     0 0 50px rgba(253, 185, 39, 0.2),
+                     0 0 80px rgba(253, 185, 39, 0.05);
+    }
+}
+
+/* ========== GOLD ACCENT OVERRIDES ========== */
+
+/* Intro name glow */
+#intro h1 {
+    text-shadow: 0 0 40px rgba(253, 185, 39, 0.12);
+}
+
+/* Smooth link transitions */
+a {
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Nav active/hover gold underline */
+#nav ul.links li.active a,
+#nav ul.links li a:hover {
+    border-bottom-color: var(--gold) !important;
+}
+
+#nav ul.links li.active {
+    background-color: var(--gold) !important;
+}
+
+#nav ul.links li.active a {
+    color: #000 !important;
+}
+
+#nav {
+    border-bottom: 1px solid rgba(253, 185, 39, 0.15);
+}
+
+/* Buttons gold hover */
+.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    transition: all 0.3s ease !important;
+}
+
+.button:hover,
+input[type="submit"]:hover {
+    background-color: var(--gold) !important;
+    color: #000 !important;
+    box-shadow: 0 0 25px var(--gold-glow) !important;
+}
+
+.button.large:hover {
+    box-shadow: 0 0 35px var(--gold-glow) !important;
+}
+
+/* Logo gold hover */
+#header .logo:hover {
+    color: var(--gold) !important;
+}
+
+/* Social icons gold hover */
+.icons a:hover {
+    color: var(--gold) !important;
+    border-color: var(--gold) !important;
+}
+
+/* Gold selection color */
+::selection {
+    background: rgba(253, 185, 39, 0.3);
+    color: #fff;
+}
+
+/* Footer submit button - always gold */
+#footer input[type="submit"] {
+    background-color: var(--gold) !important;
+    color: #000 !important;
+    font-weight: 700;
+    box-shadow: none !important;
+}
+
+#footer input[type="submit"]:hover {
+    background-color: var(--gold-light) !important;
+    box-shadow: 0 0 25px var(--gold-glow) !important;
+}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold-dark);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}
+
+/* ========== PARTICLES CANVAS ========== */
+#particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#intro {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========== TYPING EFFECT ========== */
+.typed-cursor {
+    display: inline-block;
+    color: var(--gold);
+    font-weight: 300;
+    font-size: 1.1em;
+    animation: blink 0.75s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+#intro p {
+    min-height: 1.5em;
+}
+
+/* ========== SCROLL REVEAL ========== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal.delay-1 { transition-delay: 0.15s; }
+.reveal.delay-2 { transition-delay: 0.3s; }
+.reveal.delay-3 { transition-delay: 0.45s; }
+
+/* ========== ENHANCED PROJECT CARDS ========== */
+#main .posts article {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#main .posts article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                0 0 30px var(--gold-glow);
+}
+
+#main .posts article .image {
+    overflow: hidden;
+    position: relative;
+}
+
+#main .posts article .image img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#main .posts article:hover .image img {
+    transform: scale(1.05);
+}
+
+/* Featured post image hover */
+.post.featured .image.main {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.post.featured .image.main img {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.post.featured:hover .image.main img {
+    transform: scale(1.02);
+}
+
+/* Tech Stack Tags */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: 1px solid rgba(253, 185, 39, 0.35);
+    color: var(--gold) !important;
+    background: rgba(253, 185, 39, 0.06);
+    transition: all 0.3s ease;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.tech-tag:hover {
+    background: rgba(253, 185, 39, 0.15);
+    border-color: var(--gold);
+    box-shadow: 0 0 12px rgba(253, 185, 39, 0.15);
+}
+
+/* ========== COMING SOON CARDS ========== */
+.coming-soon-card .image img {
+    filter: brightness(0.3) saturate(0.2);
+    transition: filter 0.4s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.coming-soon-card:hover .image img {
+    filter: brightness(0.45) saturate(0.4);
+}
+
+.coming-soon-card h2 a {
+    opacity: 0.4 !important;
+}
+
+.coming-soon-card p {
+    color: var(--text-muted) !important;
+    font-style: italic;
+}
+
+.coming-soon-card .button {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+/* ========== SECTION TITLES ========== */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary) !important;
+    letter-spacing: 0.05em;
+}
+
+.section-title .subtitle {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.section-title .gold-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
+    margin: 1.25rem auto 0;
+    border-radius: 3px;
+}
+
+/* ========== ABOUT / INTERESTS SECTION ========== */
+.interests-section {
+    padding: 2rem 0 3rem;
+    text-align: center;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 980px) {
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .interests-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+}
+
+.interest-card {
+    padding: 2rem 1.25rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.015);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: default;
+}
+
+.interest-card:hover {
+    border-color: rgba(253, 185, 39, 0.25);
+    background: rgba(253, 185, 39, 0.04);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(253, 185, 39, 0.06);
+}
+
+.interest-card i {
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin-bottom: 1.1rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.interest-card:hover i {
+    transform: scale(1.15);
+}
+
+.interest-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary) !important;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.interest-card p {
+    font-size: 0.82rem;
+    color: var(--text-muted) !important;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ========== STATS BAR ========== */
+.stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem 0;
+    margin: 1rem 0 2rem;
+    border-top: 1px solid var(--border-subtle) !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--gold) !important;
+    display: block;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--gold-dark) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+@media screen and (max-width: 480px) {
+    .stats-bar {
+        gap: 1.5rem;
+    }
+    .stat-number {
+        font-size: 1.8rem;
+    }
+}
+
+/* ========== SMOOTH PAGE TRANSITIONS ========== */
+#wrapper.fade-in > * {
+    transition: opacity 0.6s ease;
+}

@@ -10,9 +10,24 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+
+		<!-- Loading Screen -->
+			<div id="loader">
+				<div class="loader-content">
+					<div class="loader-monogram">HP</div>
+					<div class="loader-tagline">Portfolio</div>
+					<div class="loader-bar">
+						<div class="loader-bar-fill"></div>
+					</div>
+				</div>
+			</div>
+
+		<!-- Particles Background -->
+			<canvas id="particles-canvas"></canvas>
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
@@ -21,7 +36,7 @@
 					<div id="intro">
 						<h1>Hatvik<br />
 						Patel</h1>
-						<p>Software Engineer <a href="https://html5up.net/license"></a></p>
+						<p><span id="typed-text"></span><span class="typed-cursor">|</span></p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -40,7 +55,7 @@
 							<li><a href="elements.html">Resume</a></li>
 						</ul>
 						<ul class="icons">
-							<li><a href="https://x.com/kinghatx " class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://x.com/kinghatx" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="https://www.instagram.com/hatvik28/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="https://github.com/hatvik28" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 							<li><a href="https://www.linkedin.com/in/hatvikpatel/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -50,15 +65,36 @@
 				<!-- Main -->
 					<div id="main">
 
+						<!-- Quick Stats -->
+							<div class="stats-bar reveal">
+								<div class="stat-item">
+									<span class="stat-number" data-target="3" data-suffix="+">0</span>
+									<span class="stat-label">Projects</span>
+								</div>
+								<div class="stat-item">
+									<span class="stat-number" data-target="5" data-suffix="+">0</span>
+									<span class="stat-label">Technologies</span>
+								</div>
+								<div class="stat-item">
+									<span class="stat-number" data-target="2">0</span>
+									<span class="stat-label">Years Experience</span>
+								</div>
+							</div>
+
 						<!-- Featured Post -->
-							<article class="post featured">
+							<article class="post featured reveal">
 								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h2><a href="#">Bug Detection and Fixing<br />
+									<span class="date">Capstone 2024</span>
+									<h2><a href="https://github.com/hatvik28/BDFCapstone">Bug Detection & Fixing<br />
 									</a>Using Large Language Models</h2>
-									<p></p>
 								</header>
-								<a href="#" class="image main"><img src="images/UI.png" alt="" /></a>
+								<a href="https://github.com/hatvik28/BDFCapstone" class="image main"><img src="images/UI.png" alt="Bug Detection and Fixing Using LLMs" /></a>
+								<div class="tech-tags">
+									<span class="tech-tag">Python</span>
+									<span class="tech-tag">LLMs</span>
+									<span class="tech-tag">NLP</span>
+									<span class="tech-tag">AI / ML</span>
+								</div>
 								<ul class="actions special">
 									<li><a href="https://github.com/hatvik28/BDFCapstone" class="button large">View Project</a></li>
 								</ul>
@@ -66,39 +102,77 @@
 
 						<!-- Posts -->
 							<section class="posts">
-							<article>
-								<header>
-									<span class="date">Fall 2023</span>
-									<h2><a href="https://github.com/hatvik28/LionChat">LionChat<br /></a></h2>
-								</header>
-								<a href="https://github.com/hatvik28/LionChat" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-								<p>An AI-powered chatbot for Penn State students, built with Flask, OpenAI GPT-3.5 Turbo, and LlamaIndex for RAG-based question answering.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/hatvik28/LionChat" class="button">Full Project</a></li>
-								</ul>
-							</article>
-								<article>
+								<article class="reveal">
 									<header>
-										<span class="date">Date</span>
-										<h2><a href="#">Project 3<br /></a></h2>
+										<span class="date">Fall 2023</span>
+										<h2><a href="https://github.com/hatvik28/LionChat">LionChat<br /></a></h2>
+									</header>
+									<a href="https://github.com/hatvik28/LionChat" class="image fit"><img src="images/pic02.jpg" alt="LionChat - AI Chatbot" /></a>
+									<p>An AI-powered chatbot for Penn State students, built with RAG-based question answering for campus-specific content.</p>
+									<div class="tech-tags">
+										<span class="tech-tag">Python</span>
+										<span class="tech-tag">Flask</span>
+										<span class="tech-tag">OpenAI</span>
+										<span class="tech-tag">LlamaIndex</span>
+										<span class="tech-tag">SQLite</span>
+									</div>
+									<ul class="actions special">
+										<li><a href="https://github.com/hatvik28/LionChat" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<article class="reveal delay-1 coming-soon-card">
+									<header>
+										<span class="date">Coming Soon</span>
+										<h2><a href="#">Next Project<br />In Progress</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p>Loading .....</p>
+									<p>Something new is in the works. Check back soon for the next addition to the portfolio.</p>
 									<ul class="actions special">
-										<li><a href="#" class="button">Full Project</a></li>
+										<li><a href="#" class="button">Stay Tuned</a></li>
 									</ul>
 								</article>
-								<article>
+								<article class="reveal delay-2 coming-soon-card">
 									<header>
-										<span class="date">Date</span>
-										<h2><a href="#">Project 4<br /></a></h2>
+										<span class="date">Coming Soon</span>
+										<h2><a href="#">More On<br />The Way</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>Loading ....</p>
+									<p>Always building, always learning. New projects are on the horizon.</p>
 									<ul class="actions special">
-										<li><a href="#" class="button">Full Project</a></li>
+										<li><a href="#" class="button">Stay Tuned</a></li>
 									</ul>
 								</article>
+							</section>
+
+						<!-- Beyond the Code -->
+							<section class="interests-section reveal">
+								<div class="section-title">
+									<h2>Beyond the Code</h2>
+									<p class="subtitle">What drives me outside of work</p>
+									<div class="gold-line"></div>
+								</div>
+								<div class="interests-grid">
+									<div class="interest-card">
+										<i class="fas fa-basketball-ball"></i>
+										<h4>Lakers</h4>
+										<p>Purple & Gold forever. Mamba Mentality runs deep.</p>
+									</div>
+									<div class="interest-card">
+										<i class="fas fa-football-ball"></i>
+										<h4>Steelers</h4>
+										<p>Steel Curtain. Black & Gold on Sundays.</p>
+									</div>
+									<div class="interest-card">
+										<i class="fas fa-music"></i>
+										<h4>Music</h4>
+										<p>Drake on repeat. Hip-hop & everything in between.</p>
+									</div>
+									<div class="interest-card">
+										<i class="fas fa-film"></i>
+										<h4>Film & TV</h4>
+										<p>Always watching something. Movies & shows on deck.</p>
+									</div>
+								</div>
 							</section>
 
 						<!-- Footer -->
@@ -137,14 +211,14 @@
 						<section class="split contact">
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">hatvikpersonal@gmail.com</a></p>
+								<p><a href="mailto:hatvikpersonal@gmail.com">hatvikpersonal@gmail.com</a></p>
 							</section>
 						</section>
 					</footer>
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; Hatvik Patel</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
@@ -157,6 +231,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
 
 	</body>
 </html>
